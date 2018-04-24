@@ -1,3 +1,7 @@
+/**
+ * This class contains examples from YouTube video
+ * 'Введение в программирование на примере Java' - "Компьютерная школа Hillel"
+ */
 package com.lizogub.HomeWork1;
 
 public class FirstClass {
