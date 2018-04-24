@@ -1,4 +1,4 @@
-package com.lizogub;
+package com.lizogub.LabWork1;
 
 // psvm
 // sout
