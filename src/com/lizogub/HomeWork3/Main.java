@@ -43,12 +43,11 @@ public class Main {
           Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
               Note: If the number is a multiple of both 3 and 5, only count it once.
          */
-        Codingbat cd = new Codingbat();
+        Codewars cd = new Codewars();
 
         System.out.println("getSumMult35(10) → 23  =  " + cd.getSumMult35(10));
         System.out.println("getSumMult35(15) → 45  =  " + cd.getSumMult35(15));
         System.out.println("getSumMult35(16) → 60  =  " + cd.getSumMult35(16));
         System.out.println("getSumMult35(20) → 78  =  " + cd.getSumMult35(20));
-
     }
 }
