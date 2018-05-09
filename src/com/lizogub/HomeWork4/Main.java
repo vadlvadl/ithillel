@@ -5,7 +5,9 @@ public class Main {
 //        runExcersize1();
 //        runExcersize2();
 //        runExcersize3();
-        runExcersize4();
+//        runExcersize4();
+//        runExcersize5();
+        runExcersize6();
     }
 
     public static void runExcersize1(){
@@ -49,5 +51,26 @@ public class Main {
         System.out.println("getSumMult35(15) → 45  =  " + cd.getSumMult35(15));
         System.out.println("getSumMult35(16) → 60  =  " + cd.getSumMult35(16));
         System.out.println("getSumMult35(20) → 78  =  " + cd.getSumMult35(20));
+    }
+
+    public static void runExcersize5(){
+        /**
+         * There is an array with some numbers. All numbers are equal except for one. Try to find it!
+         */
+        Codewars cd = new Codewars();
+
+        System.out.println("findUniq([3,3,4,3,3]) -> 4  =  " + cd.findUniq(new double[]{3,3,4,3,3}));
+        System.out.println("findUniq([3,3,3,3,2]) -> 2  =  " + cd.findUniq(new double[]{3,3,3,3,2}));
+        System.out.println("findUniq([7,3,3,3,3]) -> 7  =  " + cd.findUniq(new double[]{7,3,3,3,3}));
+        System.out.println("findUniq([3,6,3,3,3]) -> 6  =  " + cd.findUniq(new double[]{3,6,3,3,3}));
+    }
+
+    public static void runExcersize6(){
+        Codewars cd = new Codewars();
+
+        System.out.println("isAnagram(\"foefet\", \"toffee\") -> true  =  " + cd.isAnagram("foefet","toffee"));
+        System.out.println("isAnagram(\"Buckethead\", \"DeathCubeK\") -> true  =  " + cd.isAnagram("Buckethead","DeathCubeK"));
+        System.out.println("isAnagram(\"Twoo\", \"Woot\") -> true  =  " + cd.isAnagram("Twoo","Woot"));
+        System.out.println("isAnagram(\"apple\", \"pale\") -> false  =  " + cd.isAnagram("apple","pale"));
     }
 }

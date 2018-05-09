@@ -1,5 +1,8 @@
 package com.lizogub.HomeWork4;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Codewars {
 
     /**
@@ -21,4 +24,50 @@ public class Codewars {
         return sum;
     }
 
+    /**
+     * There is an array with some numbers. All numbers are equal except for one. Try to find it!
+     * @param arr
+     * @return
+     */
+    public double findUniq(double arr[]) {
+        double a = arr[0];
+        double result = arr[0];
+        int same = 0;
+
+        for (int i = 1; i < arr.length;i++){
+            if(arr[i] != a){
+                result = arr[i];
+            } else {
+                same++;
+            }
+        }
+
+        if(same == 0){
+            return arr[0];
+        }
+
+        return result;
+    }
+
+    /**
+     * Complete the function to return true if the two arguments given are anagrams of theeach other; return false otherwise.
+     * @param test
+     * @param original
+     * @return
+     */
+    public boolean isAnagram(String test, String original) {
+        char tmpTest[] = test.toLowerCase().toCharArray();
+        char tmpOriginal[] = original.toLowerCase().toCharArray();
+
+        Arrays.sort(tmpTest);
+        Arrays.sort(tmpOriginal);
+
+        String newTest = new String(tmpTest);
+        String newOriginal = new String(tmpOriginal);
+
+        if(newOriginal.equals(newTest)){
+            return true;
+        }
+        return false;
+    }
 }
