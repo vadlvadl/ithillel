@@ -7,7 +7,8 @@ public class Main {
 //        runExcersize3();
 //        runExcersize4();
 //        runExcersize5();
-        runExcersize6();
+//        runExcersize6();
+        runExcersize7();
     }
 
     public static void runExcersize1(){
@@ -72,5 +73,12 @@ public class Main {
         System.out.println("isAnagram(\"Buckethead\", \"DeathCubeK\") -> true  =  " + cd.isAnagram("Buckethead","DeathCubeK"));
         System.out.println("isAnagram(\"Twoo\", \"Woot\") -> true  =  " + cd.isAnagram("Twoo","Woot"));
         System.out.println("isAnagram(\"apple\", \"pale\") -> false  =  " + cd.isAnagram("apple","pale"));
+    }
+
+    public static void runExcersize7(){
+        Codewars cd = new Codewars();
+
+        System.out.println("charCount(\"fizzbuzzZ FIZZBUZZ\",'Z') -> 9  =  " + cd.charCount("fizzbuzzZ FIZZBUZZ",'Z'));
+        System.out.println("charCount(\"FIZZBUZZ\",'z') -> 4  =  " + cd.charCount("FIZZBUZZ",'z'));
     }
 }

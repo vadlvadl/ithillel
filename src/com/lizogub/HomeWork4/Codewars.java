@@ -70,4 +70,28 @@ public class Codewars {
         }
         return false;
     }
+
+    /**
+     * The goal of this kata is to write a function that takes two inputs:
+     * a string and a character.
+     * The function will count the number of times that character appears in the string.
+     * The count is case insensitive.
+     * @param str
+     * @param c
+     * @return
+     */
+    public int charCount(String str, char c) {
+
+        int count = 0;
+        char tmpStr[] = str.toLowerCase().toCharArray();
+        c = Character.toLowerCase(c);
+
+        for(char c1 : tmpStr){
+            if(c1 == c){
+                count++;
+            }
+        }
+
+        return count;
+    }
 }
