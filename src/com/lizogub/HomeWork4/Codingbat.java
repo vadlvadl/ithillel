@@ -1,4 +1,4 @@
-package com.lizogub.HomeWork3;
+package com.lizogub.HomeWork4;
 
 public class Codingbat {
 
