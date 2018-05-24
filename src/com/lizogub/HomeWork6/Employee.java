@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class Employee extends Human implements StaffMember, Iterable{
+public class Employee extends Human implements StaffMember{
 
     protected Address homeAddress;
     protected String mobilePhone;
@@ -44,18 +44,4 @@ public class Employee extends Human implements StaffMember, Iterable{
         return name + " (" + homeAddress.getCity() + ")";
     }
 
-    @Override
-    public Iterator iterator() {
-        return null;
-    }
-
-    @Override
-    public void forEach(Consumer action) {
-
-    }
-
-    @Override
-    public Spliterator spliterator() {
-        return null;
-    }
 }
