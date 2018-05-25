@@ -1,6 +1,6 @@
 package com.lizogub.HomeWork6;
 
-public class Animal {
+public class Animal implements Comparable{
     protected String name;
     protected int age = 0;
 
@@ -20,4 +20,17 @@ public class Animal {
         }
         return this.name;
     }
+
+
+    // Check compareTo method
+    @Override
+    public int compareTo(Object o) {
+        return 1;
+    }
+
+    public int compareTo(Animal o) {
+        return name.compareTo(o.name);
+    }
+
+
 }

@@ -49,7 +49,7 @@ public class Main {
     }
 
     protected static void runSetExample(){
-        Set<Animal> zoo = new HashSet<Animal>();
+        Set<Animal> zoo = new TreeSet<Animal>();
 
         zoo.add(new Monkey("Shirly"));
         zoo.add(new Leopard("Joshua"));

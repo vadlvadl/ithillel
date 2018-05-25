@@ -1,5 +1,7 @@
 package com.lizogub.HomeWork8;
 
+import org.omg.CORBA.INTERNAL;
+
 import java.util.*;
 
 public class Tasks {
@@ -72,4 +74,15 @@ public class Tasks {
         Collections.sort(strings);
         System.out.println(strings.toString());
     }
+
+    public void runTask3(){
+        // speed of working collections
+        // ArrayList, LinkedList, HashSet, TreeSet
+        // add, remove, find
+
+
+    }
+
+
+
 }
