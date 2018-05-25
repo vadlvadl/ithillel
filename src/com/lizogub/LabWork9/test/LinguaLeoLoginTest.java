@@ -8,7 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class LinguaLeoLoginTest {
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.gecko.driver","C:\\Users\\vadim\\IdeaProjects\\stdyHillel\\src\\com\\lizogub\\LabWork9\\geckodriver.exe");
+//        System.setProperty("webdriver.gecko.driver","C:\\Users\\vadim\\IdeaProjects\\stdyHillel\\src\\com\\lizogub\\LabWork9\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver","/opt/geckodriver");
 //        WebDriver driver = new ChromeDriver();
         WebDriver driver = new FirefoxDriver();
         LoginPage loginPage = new LoginPage(driver);

@@ -27,7 +27,6 @@ public class CollectionTiming {
     /*
     * Functions for adding elements to collections
     */
-
     protected void addToIntArrayList(int value){
         this.integerArrayList.add(value);
     }
@@ -48,11 +47,41 @@ public class CollectionTiming {
         }
     }
 
-    protected void addToStrArrayList(String value){
+    protected void addToIntHashSet(int value){
+        this.integerHashSet.add(value);
+    }
+
+    protected void addToIntHashSet(int value, int count){
+        for(int i = 0; i < count; i++){
+            this.integerHashSet.add(value);
+        }
+    }
+
+    protected void addToIntTreeSet(int value){
+        this.integerTreeSet.add(value);
+    }
+
+    protected void addToIntTreeSet(int value, int count){
+        for(int i = 0; i < count; i++){
+            this.integerTreeSet.add(value);
+        }
+    }
+
+    protected void addToIntLinkedHashSet(int value){
+        this.integerLinkedHashSet.add(value);
+    }
+
+    protected void addToIntLinkedHashSet(int value, int count){
+        for(int i = 0; i < count; i++){
+            this.integerLinkedHashSet.add(value);
+        }
+    }
+
+    protected void addToStringArrayList(String value){
         this.stringArrayList.add(value);
     }
 
-    protected void addToStrArrayList( String value, int count){
+    protected void addToStringArrayList( String value, int count){
         for(int i = 0; i < count; i++){
             this.stringArrayList.add(value);
         }
@@ -67,5 +96,37 @@ public class CollectionTiming {
             this.stringLinkedList.add(value);
         }
     }
+
+    protected void addToStringHashSet(String value){
+        this.stringHashSet.add(value);
+    }
+
+    protected void addToStringHashSet( String value, int count){
+        for(int i = 0; i < count; i++){
+            this.stringHashSet.add(value);
+        }
+    }
+
+    protected void addToStringTreeSet(String value){
+        this.stringTreeSet.add(value);
+    }
+
+    protected void addToStringTreeSet( String value, int count){
+        for(int i = 0; i < count; i++){
+            this.stringTreeSet.add(value);
+        }
+    }
+
+    protected void addToStringLinkedHashSet(String value){
+        this.stringLinkedHashSet.add(value);
+    }
+
+    protected void addToStringLinkedHashSet( String value, int count){
+        for(int i = 0; i < count; i++){
+            this.stringLinkedHashSet.add(value);
+        }
+    }
+
+
 
 }
