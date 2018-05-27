@@ -10,123 +10,84 @@ package com.lizogub.HomeWork8;
 import java.util.*;
 
 public class CollectionTiming {
+    private int intArgument = 777;
+    private long startTime;
+    private long endTime;
+    private long duration;
 
-    List<Integer> integerArrayList = new ArrayList<Integer>();
-    List<Integer> integerLinkedList = new LinkedList<Integer>();
-    List<String> stringArrayList = new ArrayList<String>();
-    List<String> stringLinkedList = new LinkedList<String>();
+    protected Map<String,Long> results = new LinkedHashMap<String,Long>();
 
-    Set<Integer> integerHashSet = new HashSet<Integer>();
-    Set<Integer> integerTreeSet = new TreeSet<Integer>();
-    Set<Integer> integerLinkedHashSet = new LinkedHashSet<Integer>();
-    Set<String> stringHashSet = new HashSet<String>();
-    Set<String> stringTreeSet = new TreeSet<String>();
-    Set<String> stringLinkedHashSet = new LinkedHashSet<String>();
+    protected List<Integer> integerArrayList = new ArrayList<Integer>();
+    protected List<Integer> integerLinkedList = new LinkedList<Integer>();
+
+    protected Set<Integer> integerHashSet = new HashSet<Integer>();
+    protected Set<Integer> integerTreeSet = new TreeSet<Integer>();
+    protected Set<Integer> integerLinkedHashSet = new LinkedHashSet<Integer>();
+
+
+    public void execAddIntAction(int count){
+
+        duration = this.add(integerArrayList,intArgument,count);
+        System.out.println("Add " + count + " Integers " + intArgument + " to ArrayList: " + duration);
+
+        duration = this.add(integerLinkedList,intArgument,count);
+        System.out.println("Add " + count + " Integers " + intArgument + " to LinkedList: " + duration);
+
+        duration = this.add(integerHashSet,intArgument,count);
+        System.out.println("Add " + count + " Integers " + intArgument + " to HashSet: " + duration);
+
+        duration = this.add(integerTreeSet,intArgument,count);
+        System.out.println("Add " + count + " Integers " + intArgument + " to TreeSet: " + duration);
+
+        duration = this.add(integerLinkedHashSet,intArgument,count);
+        System.out.println("Add " + count + " Integers " + intArgument + " to LinkedHashSet: " + duration);
+
+    }
+
+    public void execDeleteIntAction(int count){
+
+        duration = this.delete(integerArrayList,intArgument,count);
+        System.out.println("Delete " + count + " Integers " + intArgument + " from ArrayList: " + duration);
+
+        duration = this.delete(integerLinkedList,intArgument,count);
+        System.out.println("Delete " + count + " Integers " + intArgument + " from LinkedList: " + duration);
+
+        duration = this.delete(integerHashSet,intArgument,count);
+        System.out.println("Delete " + count + " Integers " + intArgument + " from HashSet: " + duration);
+
+        duration = this.delete(integerTreeSet,intArgument,count);
+        System.out.println("Delete " + count + " Integers " + intArgument + " from TreeSet: " + duration);
+
+        duration = this.delete(integerLinkedHashSet,intArgument,count);
+        System.out.println("Delete " + count + " Integers " + intArgument + " from LinkedHashSet: " + duration);
+
+    }
 
 
     /*
     * Functions for adding elements to collections
     */
-    protected void addToIntArrayList(int value){
-        this.integerArrayList.add(value);
-    }
 
-    protected void addToIntArrayList( int value, int count){
+    protected long add(Collection collection, Object object, int count){
+        startTime = System.currentTimeMillis();
+
         for(int i = 0; i < count; i++){
-            this.integerArrayList.add(value);
+            collection.add(object);
         }
+
+        endTime = System.currentTimeMillis();
+        return endTime - startTime;
     }
 
-    protected void addToIntLinkedList(int value){
-        this.integerLinkedList.add(value);
-    }
+    protected long delete(Collection collection, Object object, int count){
+        startTime = System.currentTimeMillis();
 
-    protected void addToIntLinkedList( int value, int count){
         for(int i = 0; i < count; i++){
-            this.integerLinkedList.add(value);
+            collection.remove(object);
         }
+
+        endTime = System.currentTimeMillis();
+        return endTime - startTime;
     }
-
-    protected void addToIntHashSet(int value){
-        this.integerHashSet.add(value);
-    }
-
-    protected void addToIntHashSet(int value, int count){
-        for(int i = 0; i < count; i++){
-            this.integerHashSet.add(value);
-        }
-    }
-
-    protected void addToIntTreeSet(int value){
-        this.integerTreeSet.add(value);
-    }
-
-    protected void addToIntTreeSet(int value, int count){
-        for(int i = 0; i < count; i++){
-            this.integerTreeSet.add(value);
-        }
-    }
-
-    protected void addToIntLinkedHashSet(int value){
-        this.integerLinkedHashSet.add(value);
-    }
-
-    protected void addToIntLinkedHashSet(int value, int count){
-        for(int i = 0; i < count; i++){
-            this.integerLinkedHashSet.add(value);
-        }
-    }
-
-    protected void addToStringArrayList(String value){
-        this.stringArrayList.add(value);
-    }
-
-    protected void addToStringArrayList( String value, int count){
-        for(int i = 0; i < count; i++){
-            this.stringArrayList.add(value);
-        }
-    }
-
-    protected void addToStringLinkedList(String value){
-        this.stringLinkedList.add(value);
-    }
-
-    protected void addToStringLinkedList( String value, int count){
-        for(int i = 0; i < count; i++){
-            this.stringLinkedList.add(value);
-        }
-    }
-
-    protected void addToStringHashSet(String value){
-        this.stringHashSet.add(value);
-    }
-
-    protected void addToStringHashSet( String value, int count){
-        for(int i = 0; i < count; i++){
-            this.stringHashSet.add(value);
-        }
-    }
-
-    protected void addToStringTreeSet(String value){
-        this.stringTreeSet.add(value);
-    }
-
-    protected void addToStringTreeSet( String value, int count){
-        for(int i = 0; i < count; i++){
-            this.stringTreeSet.add(value);
-        }
-    }
-
-    protected void addToStringLinkedHashSet(String value){
-        this.stringLinkedHashSet.add(value);
-    }
-
-    protected void addToStringLinkedHashSet( String value, int count){
-        for(int i = 0; i < count; i++){
-            this.stringLinkedHashSet.add(value);
-        }
-    }
-
-
 
 }

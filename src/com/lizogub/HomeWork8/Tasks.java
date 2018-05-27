@@ -80,6 +80,10 @@ public class Tasks {
         // ArrayList, LinkedList, HashSet, TreeSet
         // add, remove, find
 
+        CollectionTiming collection = new CollectionTiming();
+        collection.execAddIntAction(1000000);
+        collection.execDeleteIntAction(100000);
+
 
     }
 
