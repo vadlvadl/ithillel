@@ -17,7 +17,7 @@ public class LinguaLeoLoginTest {
         driver.get("https://lingualeo.com/ru");
         driver.findElement(By.id("headEnterBtn")).click();
         loginPage.enterEmail("vadlvadl789@gmail.com");
-        loginPage.enterPassword("test");
+        loginPage.enterPassword("pAsSw04dR");
         loginPage.clickSendButton();
 
         try {
