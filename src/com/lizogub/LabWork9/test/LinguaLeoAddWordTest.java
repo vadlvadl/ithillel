@@ -7,47 +7,43 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class LinguaLeoAddWordTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void addWordTest() {
 
-        String word = "humanity";
+        String word = "narrow";
 
-        System.setProperty("webdriver.gecko.driver","/opt/geckodriver");
+        System.setProperty("webdriver.gecko.driver","C:\\Users\\vadim\\IdeaProjects\\stdyHillel\\src\\com\\lizogub\\LabWork9\\geckodriver.exe");
+//        System.setProperty("webdriver.gecko.driver","/opt/geckodriver");
 
         WebDriver driver = new FirefoxDriver();
+        WebDriverWait wait = new WebDriverWait(driver,10);
         DashboardPage dashboardPage = new DashboardPage(driver);
         DictionaryPage dictionaryPage = new DictionaryPage(driver);
 
         login(driver);
-
-        WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(dashboardPage.isLoggedIn());
 
+        dashboardPage.checkCurrentPage();
         dashboardPage.openDictionary();
-
         wait.until(dictionaryPage.dictionaryLoaded());
 
+        dictionaryPage.checkSearchBoxVisibility();
         dictionaryPage.enterTextToSearchBox(word);
-
+//        wait.until(dictionaryPage.checkAddButtonClickable());
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         dictionaryPage.clickAddButton();
-
         wait.until(dictionaryPage.translationLoaded());
 
         dictionaryPage.clickTranslationWord();
-
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         driver.quit();
     }
